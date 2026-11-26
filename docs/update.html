@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+    <title>Update Workbook · Expanded MCU Multiverse</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=676e2b512c0bd874">
+    <link rel="stylesheet" href="assets/site.css?v=602cd95cb21719ab">
+    <script defer src="vendor/jszip-3.10.1.min.js?v=acc7e41455a80765"></script>
+    <script defer src="migration.js?v=5d2d53d6a353084f"></script>
+    <script defer src="assets/site.js?v=d4d7815b91ce9d96"></script>
+    <script defer src="assets/migration-messages.js?v=ac0ded518409b8cb"></script>
+    <script defer src="assets/update.js?v=f3961b0254272378"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell topbar">
+        <a class="brand" href="./" aria-label="Expanded MCU Multiverse home"><span class="mark" aria-hidden="true"></span> Expanded MCU <span>Multiverse</span></a>
+        <nav aria-label="Main navigation">
+          <a href="./">Home</a>
+          <a href="./#download">Download</a>
+          <a href="update.html" aria-current="page">Update Workbook</a>
+          <a href="./#getting-started">Getting Started</a>
+          <a href="./#methodology">Methodology</a>
+          <a href="./#release-history">Release History</a>
+          <a href="./#about">About</a>
+          <a href="./#report">Report an Issue</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" class="shell update">
+      <header class="update-header">
+        <p class="eyebrow">Expanded MCU Multiverse Tracker</p>
+        <h1>Update your workbook</h1>
+        <p class="intro">Carry your marathon status, ratings, and completion dates into a fresh Community Edition.</p>
+      </header>
+      <noscript><p class="panel">The browser updater needs JavaScript. You can use the offline Python alternative below.</p></noscript>
+      <form id="upgrade-form">
+        <section class="panel" aria-labelledby="files-title">
+          <h2 id="files-title">Choose your workbooks</h2>
+          <div id="drop-zone" class="drop">
+            <label for="old">Your existing Community workbook</label>
+            <p class="hint" id="file-hint">Drop an .xlsx here or use the file picker.</p>
+            <input type="file" id="old" accept=".xlsx" required aria-describedby="file-hint">
+            <p id="selected" class="hint" aria-live="polite"></p>
+          </div>
+          <fieldset>
+            <legend>Upgrade to</legend>
+            <label class="choice"><input type="radio" name="target" value="latest" aria-describedby="latest-status" checked> Latest Community Edition</label>
+            <p id="latest-status" class="hint" role="status">Checking for the latest release…</p>
+            <label class="choice"><input type="radio" name="target" value="local"> A fresh workbook from this device</label>
+            <input type="file" id="local" accept=".xlsx" aria-label="Fresh target workbook" hidden>
+          </fieldset>
+          <details>
+            <summary>Optional link comparison</summary>
+            <label for="baseline">Untouched copy of your current edition</label>
+            <p class="hint" id="baseline-help">Use this to help identify changes you made to official fields.</p>
+            <input type="file" id="baseline" accept=".xlsx" aria-describedby="baseline-help">
+          </details>
+          <p class="privacy">Your workbook stays in this browser. The upgrader creates a new download and leaves both originals intact.</p>
+          <button class="button primary" type="submit" id="run">Upgrade workbook</button>
+          <div class="working" id="working" hidden>
+            <progress aria-label="Workbook migration in progress"></progress>
+          </div>
+          <p id="activity" role="status" aria-atomic="true"></p>
+        </section>
+      </form>
+      <section id="results" class="panel" aria-labelledby="result-title" hidden>
+        <h2 id="result-title" tabindex="-1">Migration results</h2>
+        <p id="outcome"></p>
+        <dl id="counts">
+        </dl>
+        <details id="details" hidden>
+          <summary>Review conflicts and unmatched entries</summary>
+          <ul id="issues">
+          </ul>
+        </details>
+        <div class="actions">
+          <a id="file-link" class="button primary" download="Community_Migrated.xlsx" hidden>Download upgraded workbook</a>
+          <a id="report-link" download="Migration_Report.json">Download report</a>
+        </div>
+        <p class="hint">Your original files are unchanged. Diagnostic reports may contain personal information. Keep them private.</p>
+        <p id="success-guidance" class="hint" hidden>Open the upgraded workbook in your spreadsheet app and check your progress before replacing your working copy.</p>
+      </section>
+      <footer class="update-footer">
+        <p>The website works on mobile. Use a desktop or laptop for the workbook, as mobile spreadsheet apps may limit layout, navigation, and features.</p>
+        <p>Planning minutes and catalog links come from the new edition. Edits to Optional and Documentary source references stay in your old workbook.</p>
+        <p><a href="offline/migrate_progress.py" download>Download the Python alternative</a> · <a href="offline/UPGRADE.md">Offline instructions</a> · <a href="licenses/MIT.txt">MIT License</a></p>
+        <p>Independent fan project. Unaffiliated with Marvel, Disney, or ABC.</p>
+      </footer>
+    </main>
+  </body>
+</html>

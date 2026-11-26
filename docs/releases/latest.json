@@ -1,0 +1,22 @@
+{
+  "version": "3.0.0",
+  "file": "MCU_Expanded_Multiverse_Community_v3.0.0_252142NOV26_CST.xlsx",
+  "sha256": "ba4d079841d40e34f59520f8ca43cd3b75344eafa31820b033cd8f9d3a4df8fe",
+  "releaseDate": "2026-11-25",
+  "inventory": {
+    "main": 730,
+    "optional": 113,
+    "documentary": 122,
+    "future": 20
+  },
+  "distribution": {
+    "file": "MCU_Community_v3.0.0_Distribution.zip",
+    "sha256": "bcb59c7f8c892f84402f60491738383f2880c9153b4b45d7bb654a2539b09c2f"
+  },
+  "compatibility": {
+    "format": "XLSX",
+    "tested": "LibreOffice Calc",
+    "excel": "The maintainer opened and recalculated a browser-migrated workbook in desktop Microsoft Excel. Support across all Excel features and versions remains unverified."
+  },
+  "releaseNotes": "v3.0.0.md"
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+    <meta name="description" content="A release-order MCU and multiverse marathon tracker. Download the Community Edition or upgrade your existing workbook.">
+    <title>Expanded MCU Multiverse · Community Edition</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=676e2b512c0bd874">
+    <link rel="stylesheet" href="assets/site.css?v=602cd95cb21719ab">
+    <script defer src="assets/site.js?v=d4d7815b91ce9d96"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell topbar">
+        <a class="brand" href="./" aria-label="Expanded MCU Multiverse home"><span class="mark" aria-hidden="true"></span> Expanded MCU <span>Multiverse</span></a>
+        <nav aria-label="Main navigation">
+          <a href="./" aria-current="page">Home</a>
+          <a href="#download">Download</a>
+          <a href="update.html">Update Workbook</a>
+          <a href="#getting-started">Getting Started</a>
+          <a href="#methodology">Methodology</a>
+          <a href="#release-history">Release History</a>
+          <a href="#about">About</a>
+          <a href="#report">Report an Issue</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div>
+            <p class="eyebrow">Community Edition <span data-release-ready hidden> / <span data-release="version"></span></span></p>
+            <h1>Expanded MCU<br><span>Multiverse</span></h1>
+            <p class="intro">A release-order tracker for the MCU and its connected realities. Follow films, episodes, comics, and extras, and pick up your marathon where you left off.</p>
+            <div class="actions">
+              <a class="button primary" data-release-file="distribution" download hidden>Download Community Edition <span aria-hidden="true">↓</span></a>
+              <a class="button secondary" href="update.html">Update existing workbook <span aria-hidden="true">→</span></a>
+            </div>
+            <p class="muted micro" data-release-ready hidden><span data-release="format"></span> workbook · Tested in <span data-release="tested"></span></p>
+            <p class="muted" role="status">
+            <span data-release-loading>Checking the current release…</span>
+            <span data-release-error hidden>Release information is unavailable. Retry by reloading this page, or use a local copy in the updater.</span>
+            </p>
+            <noscript><p class="muted">Enable JavaScript to load the current release and download links.</p></noscript>
+          </div>
+          <aside class="inventory" aria-labelledby="inventory-title">
+            <h2 id="inventory-title">Community inventory</h2>
+            <dl class="stats">
+              <div>
+                <dt>Main entries</dt><dd data-release="main">—</dd>
+              </div>
+              <div>
+                <dt>Optional &amp; excluded</dt><dd data-release="optional">—</dd>
+              </div>
+              <div>
+                <dt>Documentaries &amp; extras</dt><dd data-release="documentary">—</dd>
+              </div>
+              <div>
+                <dt>Future projects</dt><dd data-release="future">—</dd>
+              </div>
+            </dl>
+            <p class="muted micro">Future projects are shown separately from marathon totals.</p>
+          </aside>
+        </div>
+      </section>
+      <div class="shell sections">
+        <section id="download" class="band">
+          <div>
+            <h2>Start a new marathon</h2><p>Download the workbook, offline updater, and setup guide in one package. Save a working copy before recording your progress.</p>
+          </div>
+          <div class="stack">
+            <a class="button primary" data-release-file="distribution" download hidden>Get the distribution ZIP <span aria-hidden="true">↓</span></a>
+            <a data-release-file="workbook" download hidden>Download the workbook only</a>
+          </div>
+        </section>
+        <section id="getting-started" class="section">
+          <h2>Getting Started</h2>
+          <div class="cards">
+            <article>
+              <h3>Find your next title</h3><p>Open Marathon Hub for the next unfinished Main entry, access links, and upcoming Optional and Documentary reminders.</p>
+            </article>
+            <article>
+              <h3>Track your progress</h3><p>Set status, enter a completion date, and optionally rate the entry. The dashboard summarizes your progress by franchise and continuity.</p>
+            </article>
+            <article>
+              <h3>Keep your place</h3><p>Upgrade by permanent ID to carry status, ratings, and completion dates into a fresh edition.</p><a href="update.html">Open the workbook updater</a>
+            </article>
+          </div>
+          <p><a href="getting-started.html">Read the setup and compatibility guide</a></p>
+        </section>
+        <section id="methodology" class="section split">
+          <div>
+            <h2>Release order</h2><p>Main follows original public release order, generally using U.S. dates. Optional stories, documentaries, and announced projects have their own worksheets.</p><p><a href="methodology.html">How entries and sources are evaluated</a></p>
+          </div>
+          <div>
+            <h2>Spreadsheet compatibility</h2><p>Macro-free <span data-release="format">XLSX</span>. Tested in <span data-release="tested">LibreOffice Calc</span>. <span data-release="excel">The maintainer opened and recalculated a browser-migrated workbook in desktop Microsoft Excel. Support across all Excel features and versions remains unverified.</span></p>
+          </div>
+        </section>
+        <section id="release-history" class="section">
+          <h2>Release History</h2>
+          <div class="band">
+            <div>
+              <h3>Community Edition <span data-release="version"></span></h3><p data-release-ready hidden>Package date <span data-release="date"></span></p>
+            </div>
+            <a data-release-file="notes" download hidden>Read the current release notes</a>
+          </div>
+          <details data-release-ready hidden>
+            <summary>Download checksums (SHA-256)</summary><p>Workbook <code data-release="sha256"></code></p><p>Distribution ZIP <code data-release="distributionSha256"></code></p>
+          </details>
+          <p><a href="changelog.html">View the public changelog</a></p>
+        </section>
+        <section id="about" class="section">
+          <h2>About</h2>
+          <p>Maintained by The Multiverse Archivist. <a href="https://github.com/MultiverseArchivist/expanded-mcu-multiverse">Project repository</a></p>
+          <p><a href="licenses/CC-BY-NC-SA-4.0.txt">Workbook and documentation license</a> · <a href="licenses/MIT.txt">Website and updater code license</a></p>
+          <p>An independent fan project. Marvel, Disney, ABC, and listed providers do not sponsor or endorse it. Names and trademarks belong to their respective owners.</p>
+          <h3>Development transparency</h3>
+          <p>The Expanded MCU Multiverse Tracker is independently maintained and developed with assistance from AI tools, including OpenAI’s ChatGPT. AI assisted with research, spreadsheet development, automation, documentation, and quality assurance. The maintainer directs project scope, inclusion criteria, editorial decisions, and release approval.</p><p>Research is checked against published sources where possible. The workbook flags uncertainty, and community corrections are welcome.</p>
+        </section>
+        <section id="report" class="section">
+          <h2>Report an Issue</h2><p>Use <a href="https://github.com/MultiverseArchivist/expanded-mcu-multiverse/issues">GitHub Issues</a> to send corrections, bug reports, or suggestions.</p>
+          <div class="actions">
+            <a data-issue-link="content-correction.md" hidden>Report a content correction</a>
+            <a data-issue-link="workbook-bug.md" hidden>Report a workbook bug</a>
+            <a data-issue-link="feature-request.md" hidden>Suggest a feature</a>
+          </div>
+          <p class="muted">Include the workbook version, worksheet, title or permanent ID if available, and a source or steps to reproduce. Remove personal progress and private links from shared examples.</p>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="shell">
+        <a href="#main">Back to top</a><p>Expanded MCU Multiverse · © 2026 The Multiverse Archivist</p>
+      </div>
+    </footer>
+  </body>
+</html>
